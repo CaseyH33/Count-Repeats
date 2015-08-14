@@ -139,8 +139,15 @@
             $this->assertEquals(1, $result);
         }
 
+        function test_multiWordInput()
+        {
+            $test_repeatCounter = new RepeatCounter;
+            $input_word = "bacon taco";
+            $input_string = "I really would like a bacon taco";
 
+            $result = $test_repeatCounter->countRepeats($input_word, $input_string);
 
+            $this->assertEquals("Please input only one word", $result);
+        }
     }
-
 ?>
