@@ -64,10 +64,10 @@
     Input: "Johnny5", "Johnny5 alive"
     Output: 1
 
-12. test_puncuationString
+12. test_punctuationString
 
     Behavior: Will return 1 because the input word matches one word in the string, regardless of punctuation
-    Input: "Hello, my name is Casey"
+    Input: "Hello", "Hello, my name is Casey"
     Output: 1
 
 13. test_multiWordInput

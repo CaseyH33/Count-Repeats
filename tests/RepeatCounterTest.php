@@ -128,6 +128,18 @@
             $this->assertEquals(1, $result);
         }
 
+        function test_punctuationString()
+        {
+            $test_repeatCounter = new RepeatCounter;
+            $input_word = "Hello";
+            $input_string = "Hello, my name is Casey";
+
+            $result = $test_repeatCounter->countRepeats($input_word, $input_string);
+
+            $this->assertEquals(1, $result);
+        }
+
+
 
     }
 
