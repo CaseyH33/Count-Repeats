@@ -4,11 +4,15 @@
     {
         function countRepeats($input_word, $input_string)
         {
-            if($input_word == $input_string) {
-                return 1;
-            } else {
-                return 0;
+            $input_array = explode(" ", $input_string);
+            $count = 0;
+            foreach($input_array as $word)
+            {
+                if($input_word == $word) {
+                    ++$count;
+                }
             }
+            return $count;
         }
 
     }
