@@ -73,6 +73,17 @@
             $this->assertEquals(1, $result);
         }
 
+        function test_multiMatch_string()
+        {
+            $test_repeatCounter = new RepeatCounter;
+            $input_word = "cat";
+            $input_string = "The cat saw another cat who was a cat";
+
+            $result = $test_repeatCounter->countRepeats($input_word, $input_string);
+
+            $this->assertEquals(3, $result);
+        }
+
     }
 
 ?>
