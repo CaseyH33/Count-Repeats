@@ -117,6 +117,18 @@
             $this->assertEquals(3, $result);
         }
 
+        function test_mixedInput()
+        {
+            $test_repeatCounter = new RepeatCounter;
+            $input_word = "Johnny5";
+            $input_string = "Johnny5 alive";
+
+            $result = $test_repeatCounter->countRepeats($input_word, $input_string);
+
+            $this->assertEquals(1, $result);
+        }
+
+
     }
 
 ?>
