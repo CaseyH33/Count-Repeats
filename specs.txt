@@ -1,0 +1,77 @@
+1.  test_oneLetter_true
+
+    Behavior: Will return 1 because the letters match
+    Input: "a", "a"
+    Output: 1
+
+2.  test_twoLetters_true
+
+    Behavior: Will return 0 because the two letters do not match
+    Input: "a", "b"
+    Output: 0
+
+3.  test_oneWord_true
+
+    Behavior: Will return 1 because the two words match
+    Input: "hello", "hello"
+    Output: 1
+
+4.  test_oneWord_false
+
+    Behavior: Will return 0 because the two words do not match
+    Input: "taco", "bacon"
+    Output: 0
+
+5.  test_zeroMatch_string
+
+    Behavior: Will return 0 because the input word does not match any word in the string
+    Input: "hello", "Hi, my name is Casey"
+    Output: 0
+
+6.  test_oneMatch_string
+
+    Behavior: Will return 1 because the input word matches one word in the string
+    Input: "hello", "hello everybody, my name is Casey"
+    Output: 1
+
+7.  test_multiMatch_string
+
+    Behavior: Will return 3 because the input word matches three words in the string
+    Input: "cat", "The cat saw another cat who was a cat"
+    Output: 3
+
+8.  test_upperCase_input
+
+    Behavior: Will return 2 because the input word matches two words in the string, disregarding upper case letters in the input word
+    Input: "CAt", "The cat is a cat"
+    Output: 2
+
+9.  test_upperCase_string
+
+    Behavior: Will return 2 because the input word matches two words in the string, disregarding upper case letters in the input string
+    Input: "cat", "The Cat is a cAT"
+    Output: 2
+
+10. test_numbers
+
+    Behavior: Will return 3 because the input numbers show up 3 times in the input string
+    Input: "2", "My shopping list has 2 eggs, 2 gallons of milk, and 2 slices of bacon on it"
+    Output: 3
+
+11. test_mixedInput
+
+    Behavior: Will return 1 because the input word with numbers matches one word in the string
+    Input: "Johnny5", "Johnny5 alive"
+    Output: 1
+
+12. test_puncuationString
+
+    Behavior: Will return 1 because the input word matches one word in the string, regardless of punctuation
+    Input: "Hello, my name is Casey"
+    Output: 1
+
+13. test_multiWordInput
+
+    Behavior: Will return error message because the user input more than one input word
+    Input: "bacon taco", "I really would like a bacon taco"
+    Output: "Please enter only one word"
