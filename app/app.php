@@ -11,6 +11,7 @@
         array('twig.path' => __DIR__.'/../views'));
 
     $app->get("/", function() use ($app) {
+        //Error message is initially set to a null string
         $message="";
         return $app['twig']->render('input_form.html.twig', array('message' => $message));
     });

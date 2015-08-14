@@ -6,9 +6,12 @@
     <body>
         <div class="container">
             <h1 class="text-warning">Check how many times a word shows up in a string!</h1>
+
+            {# This if statement will display one of two error messages if the user did not input correctly #}
             {% if message is not empty%}
                 <h3 class="text-danger">{{ message }}</h3>
             {% endif %}
+
             <form action="/results">
                 <div class="form-group">
                     <label for="input_word" class="text-muted">Enter a word to search for:</label>
