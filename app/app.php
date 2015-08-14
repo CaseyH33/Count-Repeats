@@ -1,7 +1,7 @@
 <?php
 
     require_once __DIR__."/../vendor/autoload.php";
-    require_once __DIR__."/src/RepeatCounter.php";
+    require_once __DIR__."/../src/RepeatCounter.php";
 
     $app = new Silex\Application();
 
@@ -29,7 +29,7 @@
         //This will render a results page to display the word count
         else {
             $count = $new_RepeatCounter->countRepeats($input_word, $input_string);
-            return $app['twig']->render('results.html.twig', array('count' => $count, 'input_word' => $input_word, 'input_string' => $input_string);
+            return $app['twig']->render('results.html.twig', array('count' => $count, 'input_word' => $input_word, 'input_string' => $input_string));
         }
     });
 ?>
