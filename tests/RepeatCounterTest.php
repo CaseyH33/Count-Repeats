@@ -106,6 +106,17 @@
             $this->assertEquals(2, $result);
         }
 
+        function test_numbers()
+        {
+            $test_repeatCounter = new RepeatCounter;
+            $input_word = "12";
+            $input_string = "My shopping list has 12 eggs, 12 gallons of milk, and 12 slices of bacon on it";
+
+            $result = $test_repeatCounter->countRepeats($input_word, $input_string);
+
+            $this->assertEquals(3, $result);
+        }
+
     }
 
 ?>

@@ -55,7 +55,7 @@
 10. test_numbers
 
     Behavior: Will return 3 because the input numbers show up 3 times in the input string
-    Input: "2", "My shopping list has 2 eggs, 2 gallons of milk, and 2 slices of bacon on it"
+    Input: "12", "My shopping list has 12 eggs, 12 gallons of milk, and 12 slices of bacon on it"
     Output: 3
 
 11. test_mixedInput
