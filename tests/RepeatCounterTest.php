@@ -84,6 +84,28 @@
             $this->assertEquals(3, $result);
         }
 
+        function test_upperCase_input()
+        {
+            $test_repeatCounter = new RepeatCounter;
+            $input_word = "CAt";
+            $input_string = "The cat is a cat";
+
+            $result = $test_repeatCounter->countRepeats($input_word, $input_string);
+
+            $this->assertEquals(2, $result);
+        }
+
+        function test_upperCase_string()
+        {
+            $test_repeatCounter = new RepeatCounter;
+            $input_word = "cat";
+            $input_string = "The Cat is a cAT";
+
+            $result = $test_repeatCounter->countRepeats($input_word, $input_string);
+
+            $this->assertEquals(2, $result);
+        }
+
     }
 
 ?>
