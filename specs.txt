@@ -72,6 +72,18 @@
 
 13. test_multiWordInput
 
-    Behavior: Will return error message because the user input more than one input word
+    Behavior: Will return true because the user input more than one input word
     Input: "bacon taco", "I really would like a bacon taco"
-    Output: "Please enter only one word"
+    Output: true
+
+14. test_emptyInputWord
+
+    Behavior: Will return true because the user left the input word empty
+    Input: "", "Hello world"
+    Output: true
+
+15. test_emptyInputString
+
+    Behavior: Will return true because the user left the input string blank
+    Input: "hello", ""
+    Output: true
