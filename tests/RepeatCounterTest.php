@@ -51,6 +51,17 @@
             $this->assertEquals(0, $result);
         }
 
+        function test_zeroMatch_string()
+        {
+            $test_repeatCounter = new RepeatCounter;
+            $input_word = "hello";
+            $input_string = "Hi, my name is Casey";
+
+            $result = $test_repeatCounter->countRepeats($input_word, $input_string);
+
+            $this->assertEquals(0, $result);
+        }
+
     }
 
 ?>
