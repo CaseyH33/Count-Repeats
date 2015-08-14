@@ -5,11 +5,14 @@
 
     $app = new Silex\Application();
 
+    $app['debug'] = true;
+
     $app->register(new Silex\Provider\TwigServiceProvider(),
-        array('twig.path' => __.'/../views'));
+        array('twig.path' => __DIR__.'/../views'));
 
     $app->get("/", function() use ($app) {
-        return $app['twig']->render('input_form.html.twig');
+        $message="";
+        return $app['twig']->render('input_form.html.twig', array('message' => $message));
     });
 
     $app->get("/results", function() use ($app) {
@@ -32,4 +35,6 @@
             return $app['twig']->render('results.html.twig', array('count' => $count, 'input_word' => $input_word, 'input_string' => $input_string));
         }
     });
+
+    return $app;
 ?>

@@ -6,6 +6,9 @@
     <body>
         <div class="container">
             <h1 class="text-primary">Check how many times a word shows up in a string!</h1>
+            {% if message is not empty%}
+                <h3>{{ message }}</h3>
+            {% endif %}
             <form action="/results">
                 <div class="form-group">
                     <label for="input_word" class="text-warning">Enter a word to search for:</label>
