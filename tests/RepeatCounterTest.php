@@ -145,9 +145,31 @@
             $input_word = "bacon taco";
             $input_string = "I really would like a bacon taco";
 
-            $result = $test_repeatCounter->countRepeats($input_word, $input_string);
+            $result = $test_repeatCounter->checkInputWord($input_word, $input_string);
 
-            $this->assertEquals("Please input only one word", $result);
+            $this->assertEquals(true, $result);
+        }
+
+        function test_emptyInputWord()
+        {
+            $test_repeatCounter = new RepeatCounter;
+            $input_word = "";
+            $input_string = "Hello world";
+
+            $result = $test_repeatCounter->checkNullInputs($input_word, $input_string);
+
+            $this->assertEquals(true, $result);
+        }
+
+        function test_emptyInputString()
+        {
+            $test_repeatCounter = new RepeatCounter;
+            $input_word = "hello";
+            $input_string = "";
+
+            $result = $test_repeatCounter->checkNullInputs($input_word, $input_string);
+
+            $this->assertEquals(true, $result);
         }
     }
 ?>
