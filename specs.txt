@@ -4,7 +4,7 @@
     Input: "a", "a"
     Output: 1
 
-2.  test_twoLetters_true
+2.  test_oneLetter_false
 
     Behavior: Will return 0 because the two letters do not match
     Input: "a", "b"
